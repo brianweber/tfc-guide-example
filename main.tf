@@ -2,7 +2,7 @@ terraform {
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = "~> 3.0"
+      version = "2.33.0"
     }
     random = {
       version = "2.2"
@@ -11,14 +11,9 @@ terraform {
 }
 
 # Configure the AWS Provider
-provider "aws" {
-  aws_access_key_id = var.aws_access_key_id
-  aws_secret_access_key = var.aws_secret_access_key
-  region = var.aws_region
-}
+provider "aws" { }
 
-provider "random" {
-}
+provider "random" { }
 
 resource "random_pet" "table_name" {}
 
